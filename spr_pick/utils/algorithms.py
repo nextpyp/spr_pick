@@ -65,7 +65,7 @@ def non_maximum_suppression(x, r, contam, threshold=-np.inf):
     jj = jj[mask]
     major_axis = x.shape[1]
     coord_deltas = ii*major_axis + jj
-    print('x',x.shape)
+    # print('x',x.shape)
 
     A = x.ravel()
     I = np.argsort(A, axis=None)[::-1] # reverse to sort in descending order

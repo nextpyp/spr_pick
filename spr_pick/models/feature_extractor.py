@@ -51,7 +51,7 @@ class ResNet(nn.Module):
         if len(x.size()) < 4:
             x = x.unsqueeze(1) # add channels dim
         if self.pad: ## add (width-1)//2 zeros to edges of x
-            print('is pad')
+            # print('is pad')
             p = self.width//2
             x = F.pad(x, (p,p,p,p))
         # print('x', x.shape)
