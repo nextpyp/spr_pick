@@ -265,9 +265,9 @@ class MicrographDataset(Dataset):
 
 		missing = train_targets.image_name.loc[~check].unique().tolist()
 
-		if len(missing) > 0:
-			print('WARNING: {} micrographs listed in the coordinates file are missing from the training images. Image names are listed below.'.format(len(missing)), file=sys.stderr)
-			print('WARNING: missing micrographs are: {}'.format(missing), file=sys.stderr)
+		if False and len(missing) > 0:
+			print('{} micrograph(s) listed in the coordinates file are missing from the training images. Image names are listed below.'.format(len(missing)), file=sys.stderr)
+			print('Missing micrograph(s) are: {}'.format(missing), file=sys.stderr)
 
 		train_targets = train_targets.loc[check]
 
