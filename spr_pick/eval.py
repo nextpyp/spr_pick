@@ -46,7 +46,7 @@ class DenoiserEvaluator(DenoiserTrainer):
         # self.mode = "joint"
         # self.denoiser.mode = self.mode
         # self.alpha = alpha
-        state_dict = torch.load(target_path, map_location="cpu")
+        state_dict = torch.load(target_path, map_location="cpu", weights_only=False)
         if "denoiser" in state_dict:
             self.load_state_dict(state_dict)
         else:
